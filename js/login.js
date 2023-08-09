@@ -11,17 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (username.trim() === "" || password.trim() === "") {
         alert("Por favor, ingrese usuario y contraseña.");
       } else {
-        // Validación ficticia de credenciales (siempre se considera válida)
-        // En una aplicación real, aquí debes realizar una validación segura en el servidor
-        const validCredentials = true;
+        // Guardar autenticación en localStorage
+        localStorage.setItem("isAuthenticated", "true");
   
-        if (validCredentials) {
-          // Redireccionar a index.html si las credenciales son válidas
-          window.location.href = "index.html";
-        } else {
-          alert("Credenciales incorrectas");
-        }
+        // Redireccionar a la página de portada
+        window.location.href = "index.html";
       }
     });
   });
+  
   
